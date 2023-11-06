@@ -8,7 +8,8 @@
     <title>Portfolio Tailwind CSS</title>
 
     <link rel="stylesheet" href="dist/output.css">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
@@ -86,7 +87,7 @@
     <!-- Header Section End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36 pb-36 bg-slate-100 dark:bg-slate-800">
+    <section id="home" class="pt-36 pb-36 h-[700px] bg-slate-100 dark:bg-slate-800">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full self-center px-4 lg:w-1/2">
@@ -110,8 +111,8 @@
     <!-- About Section Start -->
     <section id="about" class="pt-28 pb-32 dark:bg-dark">
         <div class="container">
-            <div class="flex flex-wrap">
-                <div class="w-full px-4 mb-8 lg:w-1/2">
+            <div class="flex flex-wrap w-full">
+                <div class="w-full px-4 mb-8 lg:w-1/2" data-aos="fade-up" data-aos-duration="2000">
                     <h4 class="font-bold uppercase text-primary text-lg mb-3">Tentang Saya</h4>
                     <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl dark:text-white">Halo Semua</h2>
                     <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">namaku Bahtiar, aku menyukai
@@ -121,7 +122,7 @@
                         atlet panahan. Beberapa kali memenangkan medali di tingkat provinsi. Panahan ini melatihku untuk
                         terus fokus pada tujuan.</p>
                 </div>
-                <div class="w-full px-4 lg:w-1/2">
+                <div class="w-full px-4 lg:w-1/2" data-aos="fade-up" data-aos-duration="2000">
                     <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white">Mari Berteman
                     </h3>
                     <p class="font-medium text-base text-secondary mb-6 lg:text-lg">Dibawah ini adalah media sosialku
@@ -129,7 +130,7 @@
                     <div class="flex items-center">
                         <!-- Instagram -->
                         <a href="https://www.instagram.com/rizkibhtr/" target="_blank"
-                            class="w-14 h-14 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            class="w-14 h-14 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-500">
                             <svg role="img" width="27" class="fill-current" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <title>Instagram</title>
@@ -140,7 +141,7 @@
 
                         <!-- Linkedin -->
                         <a href="https://www.linkedin.com/in/muhammad-rizki-bahtiar-575387259/" target="_blank"
-                            class="w-14 h-14 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            class="w-14 h-14 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-500">
                             <svg role="img" width="27" class="fill-current" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <title>LinkedIn</title>
@@ -151,7 +152,7 @@
 
                         <!-- github -->
                         <a href="https://github.com/mrizkibahtiar" target="_blank"
-                            class="w-14 h-14 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            class="w-14 h-14 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-500">
                             <svg role="img" viewBox="0 0 24 24" width="27" class="fill-current"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <title>GitHub</title>
@@ -169,19 +170,20 @@
     <!-- Portfolio Section Start -->
     <section id="portfolio" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
         <div class="container">
-            <div class="w-full px-4">
+            <div class="w-full px-4" data-aos="fade-up" data-aos-duration="2000">
                 <div class="max-w-xl mx-auto text-center mb-10">
                     <h4 class="font-semibold text-lg text-primary mb-2 ">Portfolio</h4>
                     <h2 class="font-bold text-dark text-3xl mb-4 m:text-4xl lg:text-5xl dark:text-white">Project Terbaru
                     </h2>
                     <p class="font-medium text-base text-secondary md:text-lg">Semua project yang baru-baru ini aku
-                        kerjakan</p>
+                        kerjakan, semua web masih bersifat statis</p>
                 </div>
             </div>
 
 
             <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
-                <div class="mb-12 p-4 md:w-1/2">
+                <!-- netflix -->
+                <div class="mb-12 p-4 md:w-1/2" data-aos="flip-right" data-aos-duration="2000">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <a href="https://pilem-clone.netlify.app/" target="_blank"><img
                                 src="dist/img/portfolio/netflix-clone.png" alt="netflix-clone" class="w-full"></a>
@@ -190,15 +192,35 @@
                         class="inline-block font-semibold text-dark text-xl mt-5 mb-3 dark:text-white hover:underline hover:underline-offset-2">Netflix
                         Clone</a>
                     <p class="font-medium text-base text-secondary">Cloning tampilan dari Landing Page milik Netflix.
-                        Semua halaman masih bersifat statis, belum ada proses back-End nya</p>
+                    </p>
                 </div>
-                <div class="mb-12 p-4 md:w-1/2">
+
+                <!-- RG -->
+                <div class="mb-12 p-4 md:w-1/2" data-aos="flip-right" data-aos-duration="2000">
                     <div class="rounded-md shadow-md overflow-hidden">
-                        <img src="dist/img/portfolio/2.jpg" alt="Code" class="w-full">
+                        <a href="https://ruangguru-clone.netlify.app/" target="_blank"><img
+                                src="dist/img/portfolio/RG-clone.png" alt="Ruangguru-clone" class="w-full"></a>
                     </div>
-                    <h3 class="font-semibold text-dark text-xl mt-5 mb-3 dark:text-white">Code by Bahtiar</h3>
-                    <p class="font-medium text-base text-secondary">Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Eius saepe itaque dolores.</p>
+                    <a href="https://pilem-clone.netlify.app/" target="_blank"
+                        class="inline-block font-semibold text-dark text-xl mt-5 mb-3 dark:text-white hover:underline hover:underline-offset-2">Ruangguru
+                        Clone</a>
+                    <p class="font-medium text-base text-secondary">Cloning tampilan dari Landing Page milik Ruangguru.
+                        tampilan masih dalam proses pengerjaan untuk menyesuaikan setiap layar.
+                    </p>
+                </div>
+
+                <!-- pinpol -->
+                <div class="mb-12 p-4 md:w-1/2" data-aos="flip-right" data-aos-duration="2000">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <a href="https://pinpol-indonesia.netlify.app/" target="_blank">
+                            <img src="dist/img/portfolio/pinpol-indonesia.png" alt="Pinpol Indonesia" class="w-full">
+                        </a>
+                    </div>
+                    <a target="_blank" href="https://pinpol-indonesia.netlify.app/"
+                        class="font-semibold text-dark text-xl dark:text-white hover:underline hover:underline-offset-2 mt-5 mb-3 inline-block">Pinpol
+                        Indonesia</a>
+                    <p class="font-medium text-base text-secondary">Landing Page pendaftaran bimbingan belajar yang
+                        bernama Pinpol Indonesia.</p>
                 </div>
             </div>
         </div>
@@ -209,7 +231,7 @@
     <section id="tools" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-300">
         <div class="container">
             <div class="w-full px-4">
-                <div class="mx-auto text-center mb-16">
+                <div class="mx-auto text-center mb-16" data-aos="fade-up" data-aos-duration="2000">
                     <h4 class="font-semibold text-lg text-primary mb-2 ">Tools</h4>
                     <h2 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text- dark:text-dark">Saya Menggunakan
                         tools berikut</h2>
@@ -220,24 +242,27 @@
 
             <div class="w-full px-4">
                 <div class="flex flex-wrap justify-center items-center">
-                    <a href="#"
-                        class="max-w-[120px] mx-4 py-4 hover:translate-y-2 transition duration-500 lg:mx-6 xl:mx-8">
+                    <a href="#" data-aos="flip-left" data-aos-duration="2000"
+                        class="max-w-[120px] mx-4 py-4 lg:mx-6 xl:mx-8">
                         <img src="dist/img/tools/html.svg" alt="HTML">
                     </a>
-                    <a href="#"
-                        class="max-w-[120px] mx-4 py-4 hover:translate-y-2 transition duration-500 lg:mx-6 xl:mx-8">
+                    <a href="#" data-aos="flip-left" data-aos-duration="2000"
+                        class="max-w-[120px] mx-4 py-4 lg:mx-6 xl:mx-8">
                         <img src="dist/img/tools/css3.svg" alt="CSS">
                     </a>
-                    <a href="#"
-                        class="max-w-[120px] mx-4 py-4 hover:translate-y-2 transition duration-500 lg:mx-6 xl:mx-8">
+                    <a href="#" data-aos="flip-left" data-aos-duration="2000"
+                        class="max-w-[120px] mx-4 py-4 lg:mx-6 xl:mx-8">
                         <img src="dist/img/tools/javascript.svg" alt="Javascript">
                     </a>
-                    <a href="#"
-                        class="max-w-[120px] mx-4 py-4 hover:translate-y-2 transition duration-500 lg:mx-6 xl:mx-8">
+                    <a href="#" data-aos="flip-left" data-aos-duration="2000"
+                        class="max-w-[120px] mx-4 py-4 lg:mx-6 xl:mx-8">
                         <img src="dist/img/tools/tailwindcss.svg" alt="Tailwind CSS">
                     </a>
-                    <a href="#" class="mx-4 py-4 hover:translate-y-2 transition duration-500 lg:mx-6 xl:mx-8">
-                        <img src="dist/img/tools/JQuery.png" alt="jQuery" class="w-72">
+                    <a href="#" data-aos="flip-left" data-aos-duration="2000" class="mx-4 py-4 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/tools/JQuery.png" alt="jQuery" class="w-56 h-auto">
+                    </a>
+                    <a href="#" data-aos="flip-left" data-aos-duration="2000" class="mx-4 py-4 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/tools/Sass.png" alt="jQuery" class="w-44 h-auto">
                     </a>
                 </div>
             </div>
@@ -250,7 +275,7 @@
     <section id="sertifikat" class="pt-36 pb32 bg-slate-100 dark:bg-dark">
         <div class="container">
             <div class="w-full px-4">
-                <div class="max-w-xl mx-auto text-center mb-16">
+                <div class="max-w-xl mx-auto text-center mb-16" data-aos="slide-up" data-aos-duration="2000">
                     <h4 class="font-semibold text-lg text-primary mb-2 ">Sertifikat</h4>
                     <h2 class="font-bold text-dark text-3xl mb-4 m:text-4xl lg:text-5xl dark:text-white">Sertifikat
                         terbaru</h2>
@@ -261,42 +286,109 @@
 
 
             <div class="flex flex-wrap">
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <!-- sertif#1 -->
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="flip-right" data-aos-duration="2000">
                     <div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg mb-10">
-                        <img src="dist/img/sertifikat/skilvul.jpg" alt="Programming" class="w-full">
+                        <img src="dist/img/sertifikat/top10-skilvul.jpg" alt="Top 10 Skilvul" class="w-full">
                         <div class="py-8 px-6">
                             <h3 class="block mb-3 font-semibold text-xl text-dark truncate dark:text-white">TOP 10 Final
                                 Project Terbaik</h3>
                             <p class="font-medium text-base text-secondary mb-6">mendapatkan posisi kelima dalam
                                 pembuatan final project pada mini bootcamp yang diadakan oleh Skilvul</p>
-                            <button onclick="window.open('dist/pdf/skilvul.pdf', '_blank');"
+                            <button onclick="window.open('dist/pdf/top10-skilvul.pdf', '_blank');"
                                 class="font-medium text-sm bg-primary py-3 px-6 rounded-lg hover:opacity-80">Lihat
                                 Sertifikat</button>
                         </div>
                     </div>
                 </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <!-- sertif#2 -->
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="flip-right" data-aos-duration="2000">
                     <div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg mb-10">
-                        <img src="dist/img/sertifikat/dicoding.jpg" alt="Mechanical Keyboard" class="w-full">
+                        <img src="dist/img/sertifikat/dasar-web-dicoding.jpg" alt="Completion Web Dasar Dicoding"
+                            class="w-full">
                         <div class="py-8 px-6">
                             <h3 class="block mb-3 font-semibold text-xl text-dark truncate dark:text-white">Kelas Dasar
                                 Pemrograman Web</h3>
                             <p class="font-medium text-base text-secondary mb-6">Menyelesaikan kelas dasar pemrograman
                                 web yang diadakan oleh Dicoding</p>
-                            <button onclick="window.open('dist/pdf/dicoding.pdf', '_blank');"
+                            <button onclick="window.open('dist/pdf/dasar-web-dicoding.pdf', '_blank');"
                                 class="font-medium text-sm bg-primary py-3 px-6 rounded-lg hover:opacity-80">Lihat
                                 Sertifikat</button>
                         </div>
                     </div>
                 </div>
-                <div class="w-full px-4 lg:w-1/2 xl:w-1/3">
+                <!-- sertif#3 -->
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="flip-right" data-aos-duration="2000">
                     <div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg mb-10">
-                        <img src="dist/img/sertifikat/course-net.jpg" alt="Coffee" class="w-full">
+                        <img src="dist/img/sertifikat/course-net.jpg"
+                            alt="Completion Pembuatan Aplikasi menggunakan Javascript" class="w-full">
                         <div class="py-8 px-6">
                             <h3 class="block mb-3 font-semibold text-xl text-dark truncate dark:text-white">Penyelesaian
                                 Kelas Javascript</h3>
                             <p class="font-medium text-base text-secondary mb-6">Lulus dengen predikat "Sangat Baik"
                                 pada program Prakerja yang bekerja sama dengan Course-Net</p>
+                            <button onclick="window.open('dist/pdf/course-net.pdf', '_blank');"
+                                class="font-medium text-sm bg-primary py-3 px-6 rounded-lg hover:opacity-80">Lihat
+                                Sertifikat</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- sertif#4 -->
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="flip-right" data-aos-duration="2000">
+                    <div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg mb-10">
+                        <img src="dist/img/sertifikat/TSA-Kominfo.jpg" alt="Coffee" class="w-full">
+                        <div class="py-8 px-6">
+                            <h3 class="block mb-3 font-semibold text-xl text-dark truncate dark:text-white">Sertifikat
+                                Pelatihan</h3>
+                            <p class="font-medium text-base text-secondary mb-6">Menyelesaikan pelatihan Java
+                                Fundamental dan Java Programming pada Program Talent Scouting Academy by KOMINFO</p>
+                            <button onclick="window.open('dist/pdf/course-net.pdf', '_blank');"
+                                class="font-medium text-sm bg-primary py-3 px-6 rounded-lg hover:opacity-80">Lihat
+                                Sertifikat</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- sertif#5 -->
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="flip-right" data-aos-duration="2000">
+                    <div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg mb-10">
+                        <img src="dist/img/sertifikat/Skilvul-HTML-Dasar.jpg" alt="Skilvul HTML Dasar" class="w-full">
+                        <div class="py-8 px-6">
+                            <h3 class="block mb-3 font-semibold text-xl text-dark truncate dark:text-white">Completion
+                                kelas HTML Dasar</h3>
+                            <p class="font-medium text-base text-secondary mb-6">Menyelesaikan kelas HTML dasar yang
+                                diadakan oleh Skilvul</p>
+                            <button onclick="window.open('dist/pdf/course-net.pdf', '_blank');"
+                                class="font-medium text-sm bg-primary py-3 px-6 rounded-lg hover:opacity-80">Lihat
+                                Sertifikat</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- sertif#6 -->
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="flip-right" data-aos-duration="2000">
+                    <div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg mb-10">
+                        <img src="dist/img/sertifikat/Skilvul-CSS-Dasar.jpg" alt="Skilvul CSS Dasar" class="w-full">
+                        <div class="py-8 px-6">
+                            <h3 class="block mb-3 font-semibold text-xl text-dark truncate dark:text-white">Completion
+                                kelas CSS Dasar</h3>
+                            <p class="font-medium text-base text-secondary mb-6">Menyelesaikan kelas CSS dasar yang
+                                diadakan oleh Skilvul</p>
+                            <button onclick="window.open('dist/pdf/course-net.pdf', '_blank');"
+                                class="font-medium text-sm bg-primary py-3 px-6 rounded-lg hover:opacity-80">Lihat
+                                Sertifikat</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- sertif#7 -->
+                <div class="w-full px-4 lg:w-1/2 xl:w-1/3" data-aos="flip-right" data-aos-duration="2000">
+                    <div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg mb-10">
+                        <img src="dist/img/sertifikat/Skilvul-JavaScript-Dasar.jpg" alt="Skilvul Javascript Dasar"
+                            class="w-full">
+                        <div class="py-8 px-6">
+                            <h3 class="block mb-3 font-semibold text-xl text-dark truncate dark:text-white">Completion
+                                kelas Javascript Dasar</h3>
+                            <p class="font-medium text-base text-secondary mb-6">Menyelesaikan kelas Javascript dasar
+                                yang
+                                diadakan oleh Skilvul</p>
                             <button onclick="window.open('dist/pdf/course-net.pdf', '_blank');"
                                 class="font-medium text-sm bg-primary py-3 px-6 rounded-lg hover:opacity-80">Lihat
                                 Sertifikat</button>
@@ -311,7 +403,7 @@
     <!-- Contact Section Start-->
     <section id="contact" class="pt-36 pb-32 dark:bg-slate-800">
         <div class="container">
-            <div class="w-full px-4">
+            <div class="w-full px-4" data-aos="slide-up" data-aos-duration="2000">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2 ">Contact</h4>
                     <h2 class="font-bold text-dark text-3xl mb-4 m:text-4xl lg:text-5xl dark:text-white">Hubungi Saya
@@ -319,7 +411,7 @@
                     <p class="font-medium text-base text-secondary md:text-lg">Kerja sama dan Info lebih lanjut</p>
                 </div>
             </div>
-            <form>
+            <form data-aos="flip-right" data-aos-duration="2000">
                 <div class="w-full lg:w-2/3 lg:mx-auto" id="containerContact">
                     <div class="w-full px-4 mb-8">
                         <label for="name" class="text-base text-primary font-bold">Nama</label>
@@ -358,7 +450,7 @@
                     <h3 class="font-bold text-2xl mb-2">Hubungi Saya</h3>
                     <p>Muhammad Rizki Bahtiar</p>
                     <p>Jl. Dr. Saharjo GG. 10 No. 2</p>
-                    <p>Kota Kediri</p>
+                    <p>Kota Kediri, Jawa Timur, Indonesia</p>
                 </div>
                 <div class="w-full p-4 mb-12 md:w-1/3">
                     <h3 class="font-semibold text-xl mb-5 text-white">Tautan</h3>
@@ -388,8 +480,8 @@
             <div class="w-full pt-10 border-t border-slate-700">
                 <div class="flex items-center justify-center mb-5">
                     <!-- Instagram -->
-                    <a href="#" target="_blank"
-                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                    <a href="https://www.instagram.com/rizkibhtr/" target="_blank"
+                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300">
                         <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <title>Instagram</title>
@@ -399,8 +491,8 @@
                     </a>
 
                     <!-- Linkedin -->
-                    <a href="#" target="_blank"
-                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                    <a href="https://www.linkedin.com/in/muhammad-rizki-bahtiar-575387259/" target="_blank"
+                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300">
                         <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <title>LinkedIn</title>
@@ -410,8 +502,8 @@
                     </a>
 
                     <!-- github -->
-                    <a href="#" target="_blank"
-                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                    <a href="https://github.com/mrizkibahtiar" target="_blank"
+                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300">
                         <svg role="img" viewBox="0 0 24 24" width="20" class="fill-current"
                             xmlns="http://www.w3.org/2000/svg">
                             <title>GitHub</title>
@@ -439,6 +531,9 @@
     </a>
     <!-- Back to top End -->
 
+    <script>
+        AOS.init();
+    </script>
     <script src="dist/js/script.js"></script>
 </body>
 
